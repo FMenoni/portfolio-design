@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence, useInView, inView } from "framer-motion";
+import { motion, AnimatePresence, inView } from "framer-motion";
 import BlurText from "@/animations/TextAnimations/BlurText/BlurText";
 import { experiences, formations } from "@/data/data-about";
 import { IconChevronLgRight } from "justd-icons";
@@ -79,13 +79,13 @@ const Presentation = () => {
                         À propos de moi
                     </motion.h2>
                     <motion.p variants={fadeInUp}>
-                        Bonjour, je m'appelle Fabian Menoni, j'ai 18 ans, et je suis passionné par l'informatique,
-                        en particulier le développement full-stack. Depuis plusieurs années, j'explore comment créer
+                        Bonjour, je m&apos;appelle Fabian Menoni, j&apos;ai 18 ans, et je suis passionné par l&apos;informatique,
+                        en particulier le développement full-stack. Depuis plusieurs années, j&apos;explore comment créer
                         des applications web complètes, du front-end au back-end, en utilisant des technologies modernes.
                     </motion.p>
                     <motion.p variants={fadeInUp}>
-                        Ce qui me motive, c'est la capacité de résoudre des problèmes complexes et de voir les résultats
-                        concrets de mon travail. J'aime particulièrement apprendre et expérimenter avec des frameworks comme
+                        Ce qui me motive, c&apos;est la capacité de résoudre des problèmes complexes et de voir les résultats
+                        concrets de mon travail. J&apos;aime particulièrement apprendre et expérimenter avec des frameworks comme
                         React et Symfony pour créer des projets innovants et fonctionnels.
                     </motion.p>
                     <motion.p variants={fadeInUp}>
