@@ -2,7 +2,6 @@
 
 import * as React from "react"
 
-import { IconX } from "justd-icons"
 import type {
   ButtonProps as ButtonPrimitiveProps,
   DialogProps,
@@ -180,7 +179,7 @@ const CloseIndicator = ({ className, ...props }: CloseButtonIndicatorProps) => {
       onPress={props.close}
       className={closeIndicator({ className })}
     >
-      <IconX className="size-4" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m5 5 14 14m0-14L5 19"></path></svg>
     </ButtonPrimitive>
   ) : null
 }

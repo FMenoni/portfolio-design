@@ -3,7 +3,6 @@
 import * as React from "react"
 
 import { cn } from "@/utils/classes"
-import { IconBulletFill, IconCheck, IconChevronLgRight } from "justd-icons"
 import type {
   MenuItemProps as MenuItemPrimitiveProps,
   MenuProps as MenuPrimitiveProps,
@@ -136,7 +135,7 @@ const Item = ({ className, isDanger = false, children, ...props }: MenuItemProps
       {(values) => (
         <>
           {typeof children === "function" ? children(values) : children}
-          {values.hasSubmenu && <IconChevronLgRight className="gpfw ml-auto size-3.5" />}
+          {values.hasSubmenu && <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons gpfw ml-auto size-3.5" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 4 8 8-8 8"></path></svg>}
         </>
       )}
     </MenuItem>
@@ -169,7 +168,7 @@ const Checkbox = ({ className, children, ...props }: MenuItemProps) => (
         {typeof children === "function" ? children(values) : children}
         {values.isSelected && (
           <span className="absolute right-2 flex size-4 shrink-0 items-center animate-in justify-center">
-            <IconCheck />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 6 9 17l-5-5"></path></svg>
           </span>
         )}
       </>
@@ -188,7 +187,7 @@ const Radio = ({ className, children, ...props }: MenuItemProps) => (
             data-slot="menu-radio"
             className="absolute right-3 flex items-center animate-in justify-center"
           >
-            <IconBulletFill />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><circle cx="12" cy="12" r="9.25" stroke="currentColor" strokeLinecap="square" strokeWidth="1.5"></circle></svg>
           </span>
         )}
       </>
