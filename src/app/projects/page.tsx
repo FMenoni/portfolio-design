@@ -4,13 +4,13 @@ import TiltedScroll from '@/components/blocks/TiltedScroll/TiltedScroll'
 import SplitText from '@/animations/TextAnimations/SplitText/SplitText'
 import { inView, motion } from 'framer-motion'
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Projets = () => {
-    const [firstProjectRef, setFirstProjectRef] = useState(null);
-    const [secondProjectRef, setSecondProjectRef] = useState(null);
-    const [thirdProjectRef, setThirdProjectRef] = useState(null);
-    const [fourthProjectRef, setFourthProjectRef] = useState(null);
+    const firstProjectRef = useRef(null);
+    const secondProjectRef = useRef(null);
+    const thirdProjectRef = useRef(null);
+    const fourthProjectRef = useRef(null);
     const [isFirstProjectInView, setIsFirstProjectInView] = useState(false);
     const [isSecondProjectInView, setIsSecondProjectInView] = useState(false);
     const [isThirdProjectInView, setIsThirdProjectInView] = useState(false);
@@ -25,35 +25,35 @@ const Projets = () => {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: { staggerChildren: 0.2 },
+            transition: { staggerChildren: 20 },
         },
     };
 
     useEffect(() => {
-        if (firstProjectRef) {
+        if (firstProjectRef.current) {
             inView(
-                firstProjectRef,
+                firstProjectRef.current,
                 () => setIsFirstProjectInView(true),
                 { amount: 0.5 }
             );
         }
-        if (secondProjectRef) {
+        if (secondProjectRef.current) {
             inView(
-                secondProjectRef,
+                secondProjectRef.current,
                 () => setIsSecondProjectInView(true),
                 { amount: 0.5 }
             );
         }
-        if (thirdProjectRef) {
+        if (thirdProjectRef.current) {
             inView(
-                thirdProjectRef,
+                thirdProjectRef.current,
                 () => setIsThirdProjectInView(true),
                 { amount: 0.5 }
             );
         }
-        if (fourthProjectRef) {
+        if (fourthProjectRef.current) {
             inView(
-                fourthProjectRef,
+                fourthProjectRef.current,
                 () => setIsFourthProjectInView(true),
                 { amount: 0.5 }
             );
@@ -93,14 +93,13 @@ const Projets = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 3, delay: 0.3 }}
                         >
-                            Page dédiée à mes projets réalisés lors de stages et d'expériences professionnelles et personnelles.
+                            Page dédiée à mes projets réalisés lors de stages et d&apos;expériences professionnelles et personnelles.
                         </motion.p>
                     </div>
                 </div>
 
                 <motion.div
                     className="max-w-6xl mx-auto my-40 space-y-10"
-                    animate={isFirstProjectInView ? "visible" : "hidden"}
                     variants={staggerContainer}
                 >
                     {/* Project 1 */}
@@ -114,7 +113,7 @@ const Projets = () => {
                         <div className='flex justify-center items-center mx-auto relative'>
                             <div className='w-[30em]'>
                                 <h2 className='text-neutral-800 text-2xl font-bold'>Site Groupe Mermoz</h2>
-                                <p className='text-neutral-500'>Site web réalisé avec Wix pour l'entreprise Groupe Mermoz. Il répond aux besoins de la société et est optimisé pour le référencement naturel.</p>
+                                <p className='text-neutral-500'>Site web réalisé avec Wix pour l&apos;entreprise Groupe Mermoz. Il répond aux besoins de la société et est optimisé pour le référencement naturel.</p>
                             </div>
                         </div>
                     </motion.div>
@@ -123,6 +122,7 @@ const Projets = () => {
                     <motion.div
                         className="border border-neutral-300 bg-neutral-100 grid grid-cols-2 rounded-[0.5em]"
                         variants={fadeInUp}
+                        animate={isSecondProjectInView ? "visible" : "hidden"}
                         ref={secondProjectRef}
                     >
                         <div className='flex justify-center items-center mx-auto relative'>
@@ -138,6 +138,7 @@ const Projets = () => {
                     <motion.div
                         className="border border-neutral-300 bg-neutral-100 grid grid-cols-2 rounded-[0.5em]"
                         variants={fadeInUp}
+                        animate={isThirdProjectInView ? "visible" : "hidden"}
                         ref={thirdProjectRef}
                     >
                         <Image src='/images/projects/templates.png' alt='Templates' className='rounded-l-[0.5em] w-full' width={400} height={400} />
@@ -153,6 +154,7 @@ const Projets = () => {
                     <motion.div
                         className="border border-neutral-300 bg-neutral-100 grid grid-cols-2 rounded-[0.5em]"
                         variants={fadeInUp}
+                        animate={isFourthProjectInView ? "visible" : "hidden"}
                         ref={fourthProjectRef}
                     >
                         <div className='flex justify-center items-center mx-auto relative'>
