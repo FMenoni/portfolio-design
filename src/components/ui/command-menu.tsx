@@ -3,7 +3,6 @@
 import * as React from "react"
 
 import { Command as CommandPrimitive } from "cmdk"
-import { IconSearch, IconX } from "justd-icons"
 import type { ModalOverlayProps, SeparatorProps, TextProps } from "react-aria-components"
 import { Button, Dialog, Modal, ModalOverlay, Text } from "react-aria-components"
 import { twJoin } from "tailwind-merge"
@@ -145,7 +144,7 @@ const CommandMenu = ({
                   <Button autoFocus={!isDesktop} onPress={close} className={closeButton()}>
                     <span className="lg:block hidden">Esc</span>
                     <span className="lg:hidden -mr-2 block">
-                      <IconX />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m5 5 14 14m0-14L5 19"></path></svg>
                       <span className="sr-only">Close command palette</span>
                     </span>
                   </Button>
@@ -168,7 +167,7 @@ const CommandMenuInput = React.forwardRef<
   const { hideSearchIndicator } = React.useContext(CommandMenuContext)
   return (
     <div className="flex border-b items-center px-3">
-      {!hideSearchIndicator && <IconSearch className="mr-2 size-5 shrink-0 opacity-50" />}
+      {!hideSearchIndicator && <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons mr-2 size-4 shrink-0 opacity-50" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m20.25 20.25-4.123-4.123m0 0A7.25 7.25 0 1 0 5.873 5.873a7.25 7.25 0 0 0 10.253 10.253Z"></path></svg>}
       <CommandPrimitive.Input
         autoFocus
         ref={ref}

@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, inView } from "framer-motion";
 import BlurText from "@/animations/TextAnimations/BlurText/BlurText";
 import { experiences, formations } from "@/data/data-about";
-import { IconChevronLgRight } from "justd-icons";
 
 const Presentation = () => {
     const [expandedExperience, setExpandedExperience] = useState<number | null>(null);
@@ -128,7 +127,7 @@ const Presentation = () => {
                                                 animate={{ rotate: expandedExperience === index ? 90 : 0 }}
                                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                             >
-                                                <IconChevronLgRight className="w-4 h-4 text-neutral-50" />
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 4 8 8-8 8"></path></svg>
                                             </motion.div>
                                             <div className="leading-none">
                                                 <h4 className="font-bold">{experience.title}</h4>
@@ -178,7 +177,7 @@ const Presentation = () => {
                                                 animate={{ rotate: expandedFormation === index ? 90 : 0 }}
                                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                             >
-                                                <IconChevronLgRight className="w-4 h-4 text-neutral-50" />
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 4 8 8-8 8"></path></svg>
                                             </motion.div>
                                             <div className="leading-none">
                                                 <h4 className="font-bold">{formation.title}</h4>

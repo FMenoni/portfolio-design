@@ -2,7 +2,6 @@
 
 import * as React from "react"
 
-import { IconHamburger } from "justd-icons"
 import { LayoutGroup, motion } from "motion/react"
 import type { LinkProps } from "react-aria-components"
 import { composeRenderProps, Link } from "react-aria-components"
@@ -174,7 +173,7 @@ const Trigger = ({ className, onPress, ...props }: React.ComponentProps<typeof B
       }}
       {...props}
     >
-      <IconHamburger />
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M2.75 12h18.5M2.75 5.75h18.5m-18.5 12.5h18.5"></path></svg>
       <span className="sr-only">Toggle Navbar</span>
     </Button>
   )
