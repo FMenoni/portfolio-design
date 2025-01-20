@@ -1,8 +1,3 @@
-Voici un exemple de fichier `README.md` pour un portfolio :
-
----
-
-```markdown
 # Mon Portfolio 🌟
 
 ![Aperçu du Portfolio](https://i.imgur.com/5hDiVrX.png)
@@ -104,10 +99,9 @@ Les contributions sont les bienvenues ! Si vous souhaitez proposer une amélio
 
 Pour toute question ou collaboration, vous pouvez me contacter via :
 
-- **Email** : [votre.email@example.com](mailto:votre.email@example.com)
-- **LinkedIn** : [Votre profil LinkedIn](https://www.linkedin.com)
+- **Email** : [contact@fmenoni.com](mailto:contact@fmenoni.com)
+- **LinkedIn** : [Votre profil LinkedIn](https://www.linkedin.com/in/fab-men/)
 
 ---
 
 Merci de visiter mon portfolio ! 💻✨
-```
