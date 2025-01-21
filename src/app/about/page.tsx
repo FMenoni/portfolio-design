@@ -177,6 +177,7 @@ const Presentation = () => {
                                                 animate={{ rotate: expandedFormation === index ? 90 : 0 }}
                                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                             >
+                                                {/* Chevron Right Icon */}
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 4 8 8-8 8"></path></svg>
                                             </motion.div>
                                             <div className="leading-none">
