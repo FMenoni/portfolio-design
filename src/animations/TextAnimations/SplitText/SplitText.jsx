@@ -17,6 +17,7 @@ const SplitText = ({
   threshold = 0.1,
   rootMargin = '-100px',
   textAlign = 'center',
+  style = {}, // Ajout du style en prop
   onLetterAnimationComplete,
 }) => {
   const letters = text.split('');
@@ -62,13 +63,13 @@ const SplitText = ({
     <p
       ref={ref}
       className={`split-parent overflow-hidden inline text-neutral-800 ${className}`}
-      style={{ textAlign }}
+      style={{ textAlign, ...style }} // Intégration du style
     >
       {springs.map((props, index) => (
         <animated.span
           key={index}
           style={props}
-          className="inline-block transform transition-opacity will-change-transform text-neutral-800"
+          className="inline-block transform transition-opacity will-change-transform text-indigo-950"
         >
           {letters[index] === ' ' ? '\u00A0' : letters[index]}
         </animated.span>

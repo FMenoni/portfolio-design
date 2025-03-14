@@ -55,13 +55,14 @@ const Presentation = () => {
 
     return (
         <div className="relative w-full overflow-hidden">
-            <div className="bg-neutral-200 w-full h-full pb-40 border border-neutral-300 rounded-[0.5em]">
+            <div className="bg-rose-50 w-full h-full pb-40 border border-neutral-300 rounded-[0.5em]">
                 <BlurText
                     text="Qui suis-je ?"
                     delay={150}
                     animateBy="words"
                     direction="top"
-                    className="text-8xl font-bold text-neutral-600 absolute top-[25rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-apple"
+                    className="text-8xl font-bold text-pink-900 absolute top-[25rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    style={{ fontFamily: 'Compressa VF' }}
                     animationFrom={undefined}
                     animationTo={undefined}
                     onAnimationComplete={undefined} />
@@ -74,20 +75,20 @@ const Presentation = () => {
                     animate={isAboutInView ? "visible" : "hidden"}
                     variants={staggerContainer}
                 >
-                    <motion.h2 className="text-6xl font-bold" variants={fadeInUp}>
+                    <motion.h2 className="text-6xl font-bold text-pink-900" variants={fadeInUp}>
                         À propos de moi
                     </motion.h2>
-                    <motion.p variants={fadeInUp}>
+                    <motion.p variants={fadeInUp} className="text-pink-500">
                         Bonjour, je m&apos;appelle Fabian Menoni, j&apos;ai 18 ans, et je suis passionné par l&apos;informatique,
                         en particulier le développement full-stack. Depuis plusieurs années, j&apos;explore comment créer
                         des applications web complètes, du front-end au back-end, en utilisant des technologies modernes.
                     </motion.p>
-                    <motion.p variants={fadeInUp}>
+                    <motion.p variants={fadeInUp} className="text-pink-500">
                         Ce qui me motive, c&apos;est la capacité de résoudre des problèmes complexes et de voir les résultats
                         concrets de mon travail. J&apos;aime particulièrement apprendre et expérimenter avec des frameworks comme
                         React et Symfony pour créer des projets innovants et fonctionnels.
                     </motion.p>
-                    <motion.p variants={fadeInUp}>
+                    <motion.p variants={fadeInUp} className="text-pink-500">
                         Je continue à développer mes compétences et à me tenir au courant des dernières tendances en
                         informatique, toujours prêt à relever de nouveaux défis dans ce domaine en constante évolution.
                     </motion.p>
@@ -101,21 +102,21 @@ const Presentation = () => {
                     animate={isExperienceInView ? "visible" : "hidden"}
                     variants={staggerContainer}
                 >
-                    <motion.h2 className="text-6xl font-bold" variants={fadeInUp}>
+                    <motion.h2 className="text-6xl font-bold text-pink-900" variants={fadeInUp}>
                         Mon parcours et expériences
                     </motion.h2>
 
                     <div className="grid grid-cols-2 md:grid-cols-2 justify-between pt-8">
                         {/* Experiences Section */}
                         <div>
-                            <motion.h3 className="font-bold text-2xl mb-4" variants={fadeInUp}>
+                            <motion.h3 className="font-bold text-2xl mb-4 text-pink-900" variants={fadeInUp}>
                                 Expériences professionnelles
                             </motion.h3>
-                            <div className="space-y-6">
+                            <div className="space-y-4">
                                 {experiences.map((experience, index) => (
                                     <motion.div
                                         key={index}
-                                        className="bg-neutral-300 p-4 rounded-[0.5em] w-[20em]"
+                                        className="bg-pink-100 p-4 rounded-[0.5em] w-[20em]"
                                         variants={fadeInUp}
                                     >
                                         <div
@@ -123,15 +124,15 @@ const Presentation = () => {
                                             onClick={() => toggleExperience(index)}
                                         >
                                             <motion.div
-                                                className="size-8 bg-neutral-500 rounded-full ring ring-neutral-400 flex items-center justify-center"
+                                                className="size-8 bg-pink-300 bg-opacity-35 rounded-full flex items-center justify-center"
                                                 animate={{ rotate: expandedExperience === index ? 90 : 0 }}
                                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                             >
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 4 8 8-8 8"></path></svg>
                                             </motion.div>
                                             <div className="leading-none">
-                                                <h4 className="font-bold">{experience.title}</h4>
-                                                <p className="text-sm text-neutral-400">{experience.date}</p>
+                                                <h4 className="font-bold text-pink-900">{experience.title}</h4>
+                                                <p className="text-sm text-pink-400">{experience.date}</p>
                                             </div>
                                         </div>
 
@@ -147,7 +148,7 @@ const Presentation = () => {
                                                         opacity: { duration: 0.3, ease: "easeInOut" },
                                                     }}
                                                 >
-                                                    <p>{experience.description}</p>
+                                                    <p className="text-pink-800">{experience.description}</p>
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>
@@ -158,14 +159,14 @@ const Presentation = () => {
 
                         {/* Formations Section */}
                         <div>
-                            <motion.h3 className="font-bold text-2xl mb-4" variants={fadeInUp}>
+                            <motion.h3 className="font-bold text-2xl mb-4 text-pink-900" variants={fadeInUp}>
                                 Formations
                             </motion.h3>
-                            <div className="space-y-6">
+                            <div className="space-y-4">
                                 {formations.map((formation, index) => (
                                     <motion.div
                                         key={index}
-                                        className="bg-neutral-300 p-4 rounded-[0.5em] w-[20em]"
+                                        className="bg-pink-100 p-4 rounded-[0.5em] w-[20em]"
                                         variants={fadeInUp}
                                     >
                                         <div
@@ -173,7 +174,7 @@ const Presentation = () => {
                                             onClick={() => toggleFormation(index)}
                                         >
                                             <motion.div
-                                                className="size-8 bg-neutral-500 rounded-full ring ring-neutral-400 flex items-center justify-center"
+                                                className="size-8 bg-pink-300 bg-opacity-35 rounded-full flex items-center justify-center"
                                                 animate={{ rotate: expandedFormation === index ? 90 : 0 }}
                                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                             >
@@ -181,8 +182,8 @@ const Presentation = () => {
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 4 8 8-8 8"></path></svg>
                                             </motion.div>
                                             <div className="leading-none">
-                                                <h4 className="font-bold">{formation.title}</h4>
-                                                <p className="text-sm text-neutral-400">{formation.date}</p>
+                                                <h4 className="font-bold text-pink-900">{formation.title}</h4>
+                                                <p className="text-sm text-pink-400">{formation.date}</p>
                                             </div>
                                         </div>
 
@@ -198,7 +199,7 @@ const Presentation = () => {
                                                         opacity: { duration: 0.3, ease: "easeInOut" },
                                                     }}
                                                 >
-                                                    <p>{formation.description}</p>
+                                                    <p className="text-pink-800">{formation.description}</p>
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>

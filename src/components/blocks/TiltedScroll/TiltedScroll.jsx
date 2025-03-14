@@ -4,16 +4,20 @@
 	1-19-2025
 */
 
+import Link from "next/link";
+
 const TiltedScroll = () => {
   const items = [
-    { id: "1", text: "Groupe Mermoz" },
-    { id: "2", text: "FMenoni" },
-    { id: "3", text: "Templates" },
-    { id: "4", text: "Portfolio" },
-    { id: "5", text: "Groupe Mermoz" },
-    { id: "6", text: "FMenoni" },
-    { id: "7", text: "Templates" },
-    { id: "8", text: "Portfolio" },
+    { id: "1", text: "Groupe Mermoz", link: "https://groupe-mermoz.fr" },
+    { id: "2", text: "FMenoni", link: "https://fmenoni.com" },
+    { id: "3", text: "Templates", link: "https://github.com/FMenoni/template-website" },
+    { id: "4", text: "Portfolio", link: "https://portfolio-fabmen.vercel.app/" },
+    { id: "5", text: "Converter", link: "https://converter-ten-delta.vercel.app/" },
+    { id: "6", text: "Groupe Mermoz", link: "https://groupe-mermoz.fr" },
+    { id: "7", text: "FMenoni", link: "https://fmenoni.com" },
+    { id: "8", text: "Templates", link: "https://github.com/FMenoni/template-website" },
+    { id: "9", text: "Portfolio", link: "https://portfolio-fabmen.vercel.app/" },
+    { id: "10", text: "Converter", link: "https://converter-ten-delta.vercel.app/" },
   ];
 
   return (
@@ -21,9 +25,9 @@ const TiltedScroll = () => {
       <div className="relative overflow-hidden [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_5rem),linear-gradient(to_left,transparent,black_5rem),linear-gradient(to_bottom,transparent,black_5rem),linear-gradient(to_top,transparent,black_5rem)]">
         <div className="grid h-[250px] w-[300px] gap-5 animate-skew-scroll grid-cols-1 sm:w-[300px] sm:grid-cols-1">
           {items.map((item) => (
+            <Link href={item.link} key={item.id} target="_blank">
             <div
-              key={item.id}
-              className="flex items-center gap-2 cursor-pointer rounded-[0.5em] border bg-neutral-100 border-gray-400 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-xl"
+              className="flex items-center gap-2 cursor-pointer rounded-[0.5em] border bg-blue-50 border-gray-400 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,8 +43,9 @@ const TiltedScroll = () => {
                 <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
                 <path d="m9 12 2 2 4-4" />
               </svg>
-              <p className="text-neutral-900">{item.text}</p>
+              <p className="text-indigo-950">{item.text}</p>
             </div>
+            </Link>
           ))}
         </div>
       </div>

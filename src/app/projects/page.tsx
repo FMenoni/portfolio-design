@@ -62,7 +62,7 @@ const Projets = () => {
 
     return (
         <div className="relative w-full overflow-hidden">
-            <div className="bg-neutral-200 w-full h-full border border-neutral-300 rounded-[0.5em]">
+            <div className="bg-sky-50 w-full h-full border border-neutral-300 rounded-[0.5em]">
                 <div className="grid grid-cols-2 items-center py-[20em] max-w-6xl space-x-10 mx-auto">
                     <motion.div
                         className=""
@@ -77,7 +77,7 @@ const Projets = () => {
                     <div>
                         <SplitText
                             text="Mes projets"
-                            className="text-6xl font-extrabold text-neutral-800"
+                            className="text-6xl text-indigo-900"
                             delay={150}
                             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
                             animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -85,10 +85,11 @@ const Projets = () => {
                             threshold={0.2}
                             rootMargin="-50px"
                             onLetterAnimationComplete={undefined}
+                            style={{ fontFamily: 'Compressa VF', fontWeight: 700 }}
                         />
 
                         <motion.p
-                            className="text-lg text-neutral-400"
+                            className="text-lg text-[#b1d7db] mt-4"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 3, delay: 0.3 }}
@@ -97,14 +98,13 @@ const Projets = () => {
                         </motion.p>
                     </div>
                 </div>
-
                 <motion.div
                     className="max-w-6xl mx-auto my-40 space-y-10"
                     variants={staggerContainer}
                 >
                     {/* Project 1 */}
                     <motion.div
-                        className="border border-neutral-300 bg-neutral-100 grid grid-cols-2 rounded-[0.5em]"
+                        className="border border-indigo-150 bg-violet-75 grid grid-cols-2 rounded-[0.5em]"
                         variants={fadeInUp}
                         animate={isFirstProjectInView ? "visible" : "hidden"}
                         ref={firstProjectRef}
@@ -112,23 +112,23 @@ const Projets = () => {
                         <Image src='/images/projects/mermoz.png' alt='Mermoz' className='rounded-l-[0.5em] w-full' width={400} height={400} />
                         <div className='flex justify-center items-center mx-auto relative'>
                             <div className='w-[30em]'>
-                                <h2 className='text-neutral-800 text-2xl font-bold'>Site Groupe Mermoz</h2>
-                                <p className='text-neutral-500'>Site web réalisé avec Wix pour l&apos;entreprise Groupe Mermoz. Il répond aux besoins de la société et est optimisé pour le référencement naturel.</p>
+                                <h2 className='text-indigo-950 text-2xl font-bold'>Site Groupe Mermoz</h2>
+                                <p className='text-[#a6c1c4]'>Site web réalisé avec Wix pour l&apos;entreprise Groupe Mermoz. Il répond aux besoins de la société et est optimisé pour le référencement naturel.</p>
                             </div>
                         </div>
                     </motion.div>
 
                     {/* Project 2 */}
                     <motion.div
-                        className="border border-neutral-300 bg-neutral-100 grid grid-cols-2 rounded-[0.5em]"
+                        className="border border-indigo-150 bg-violet-75 grid grid-cols-2 rounded-[0.5em]"
                         variants={fadeInUp}
                         animate={isSecondProjectInView ? "visible" : "hidden"}
                         ref={secondProjectRef}
                     >
                         <div className='flex justify-center items-center mx-auto relative'>
                             <div className='w-[30em]'>
-                                <h2 className='text-neutral-800 text-2xl font-bold'>Site FMenoni</h2>
-                                <p className='text-neutral-500'>Site personnel réalisé avec Next.js et Tailwind CSS. Il me permet de présenter FMenoni, mon entreprise de développement web.</p>
+                                <h2 className='text-indigo-950 text-2xl font-bold'>Site FMenoni</h2>
+                                <p className='text-[#a6c1c4'>Site personnel réalisé avec Next.js et Tailwind CSS. Il me permet de présenter FMenoni, mon entreprise de développement web.</p>
                             </div>
                         </div>
                         <Image src='/images/projects/fmenoni.png' alt='FMenoni' className='rounded-r-[0.5em] w-full' width={400} height={400} />
@@ -136,7 +136,7 @@ const Projets = () => {
 
                     {/* Project 3 */}
                     <motion.div
-                        className="border border-neutral-300 bg-neutral-100 grid grid-cols-2 rounded-[0.5em]"
+                        className="border border-indigo-150 bg-violet-75 grid grid-cols-2 rounded-[0.5em]"
                         variants={fadeInUp}
                         animate={isThirdProjectInView ? "visible" : "hidden"}
                         ref={thirdProjectRef}
@@ -144,26 +144,42 @@ const Projets = () => {
                         <Image src='/images/projects/templates.png' alt='Templates' className='rounded-l-[0.5em] w-full' width={400} height={400} />
                         <div className='flex justify-center items-center mx-auto relative'>
                             <div className='w-[30em]'>
-                                <h2 className='text-neutral-800 text-2xl font-bold'>Templates gratuits</h2>
-                                <p className='text-neutral-500'>Création de templates gratuits pour les développeurs web. Ces templates sont réalisés avec Tailwind CSS et sont disponibles sur mon GitHub.</p>
+                                <h2 className='text-indigo-950 text-2xl font-bold'>Templates gratuits</h2>
+                                <p className='text-[#a6c1c4'>Création de templates gratuits pour les développeurs web. Ces templates sont réalisés avec Tailwind CSS et sont disponibles sur mon GitHub.</p>
                             </div>
                         </div>
                     </motion.div>
 
                     {/* Project 4 */}
                     <motion.div
-                        className="border border-neutral-300 bg-neutral-100 grid grid-cols-2 rounded-[0.5em]"
+                        className="border border-indigo-150 bg-violet-75 grid grid-cols-2 rounded-[0.5em]"
                         variants={fadeInUp}
                         animate={isFourthProjectInView ? "visible" : "hidden"}
                         ref={fourthProjectRef}
                     >
                         <div className='flex justify-center items-center mx-auto relative'>
                             <div className='w-[30em]'>
-                                <h2 className='text-neutral-800 text-2xl font-bold'>Portfolio</h2>
-                                <p className='text-neutral-500'>Site personnel réalisé avec Next.js et Tailwind CSS. Il me permet de me présenter et de présenter mes projets et compétences.</p>
+                                <h2 className='text-indigo-950 text-2xl font-bold'>Portfolio</h2>
+                                <p className='text-[#a6c1c4'>Site personnel réalisé avec Next.js et Tailwind CSS. Il me permet de me présenter et de présenter mes projets et compétences.</p>
                             </div>
                         </div>
                         <Image src='/images/projects/portfolio.png' alt='Portfolio' className='rounded-r-[0.5em] w-full' width={400} height={400} />
+                    </motion.div>
+
+                    {/* Project 5 */}
+                    <motion.div
+                        className="border border-indigo-150 bg-violet-75 grid grid-cols-2 rounded-[0.5em]"
+                        variants={fadeInUp}
+                        animate={isThirdProjectInView ? "visible" : "hidden"}
+                        ref={thirdProjectRef}
+                    >
+                        <Image src='/images/projects/converter.png' alt='Templates' className='rounded-l-[0.5em] w-full' width={400} height={400} />
+                        <div className='flex justify-center items-center mx-auto relative'>
+                            <div className='w-[30em]'>
+                                <h2 className='text-indigo-950 text-2xl font-bold'>Formateur de numéros de téléphone</h2>
+                                <p className='text-[#a6c1c4'>Création d&apos;un formateur de numéros de téléphone en TypeScript. Il permet de formater un numéro de téléphone depuis un fichier Excel.</p>
+                            </div>
+                        </div>
                     </motion.div>
                 </motion.div>
             </div>

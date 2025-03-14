@@ -65,6 +65,12 @@ const config = withTV({
           150: "#EAEAEA",
           350: "#B3B3B3",
         },
+        indigo: {
+          150: "#EAE7FF",
+        },
+        violet: {
+          75: "#F5F3FF",
+        },
       },
       borderRadius: {
         "3xl": "calc(var(--radius) + 7.5px)",

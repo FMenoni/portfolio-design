@@ -55,7 +55,7 @@ export default function AppNavbar({ children, ...props }: React.ComponentProps<t
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7.75 14.75h1.5m-1.5-8h7.5m-7.5 4h3.5m8.121 9.614a3 3 0 1 1-4.242-4.243 3 3 0 0 1 4.242 4.243m0 0 1.879 1.879m-2-9.743V3.745a1 1 0 0 0-1-1H4.755a1 1 0 0 0-1 1v16.501a1 1 0 0 0 1 1H12"></path></svg> Veille Technologique
                         </Navbar.Item>
                         <Navbar.Item
-                            href="/working"
+                            href="/reviews"
                             className="py-2 px-3 bg-transparent rounded-[0.5em] transition-all duration-200 ease-in-out hover:py-3 hover:px-4 hover:bg-neutral-150">
                             {/* Star Icon */}
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" className="justd-icons size-4" data-slot="icon" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M11.55 2.033a.5.5 0 0 1 .9 0l2.569 5.354a.5.5 0 0 0 .385.279l5.911.775a.497.497 0 0 1 .278.855l-4.322 4.082a.5.5 0 0 0-.148.452l1.086 5.83a.499.499 0 0 1-.729.529l-5.242-2.83a.5.5 0 0 0-.476 0l-5.242 2.83a.499.499 0 0 1-.729-.529l1.086-5.83a.5.5 0 0 0-.148-.453L2.407 9.296a.497.497 0 0 1 .278-.855l5.91-.775a.5.5 0 0 0 .386-.279z"></path></svg> Avis
