@@ -79,13 +79,12 @@ const Trigger = ({ className, ...props }: MenuTriggerProps) => (
   </Button>
 )
 
-interface MenuContentProps<T>
-  extends Omit<PopoverProps, "children" | "style">,
-  MenuPrimitiveProps<T> {
+interface MenuContentProps<T> extends Omit<PopoverProps, "children" | "className" | "style">, Omit<MenuPrimitiveProps<T>, "style"> {
   className?: string
   popoverClassName?: string
   showArrow?: boolean
   respectScreen?: boolean
+  style?: React.CSSProperties
 }
 
 const Content = <T extends object>({
